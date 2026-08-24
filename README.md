@@ -13,7 +13,7 @@ Please check the manifests for changes and make sure they match your needs befor
 To add this bucket to scoop, run the following command in PowerShell:
 
 ```pwsh
-scoop bucket add air https://github.com/wordpure/scoop-air
+scoop bucket add air https://github.com/desktop-tools-which-may-be-useful/scoop-air
 ```
 
 then
