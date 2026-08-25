@@ -1,12 +1,12 @@
 {
-    "version": "0.1.4",
+    "version": "0.2.0",
     "homepage": "https://github.com/AndroidAppsUsedByMyself/appcast",
     "description": "Cast a single Android app's screen into its own native window on this desktop via one scrcpy virtual-display pipeline (scrcpy >= 3 and adb required at runtime).",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AndroidAppsUsedByMyself/appcast/releases/download/v0.1.4/windows-x86_64.exe",
-            "hash": "10202f75a073b66c7b191ca2e0066d671d77bfa29ac57789b91b888c38287e60",
+            "url": "https://github.com/AndroidAppsUsedByMyself/appcast/releases/download/v0.2.0/windows-x86_64.exe",
+            "hash": "4cb67b61f7cfe40422e88b1ea61f6a72587a8b95fcdc2b03e8d39cc66ee69fce",
             "bin": "appcast.exe"
         }
     },
