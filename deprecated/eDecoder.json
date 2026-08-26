@@ -7,7 +7,7 @@
     "url": "https://www.tc4shell.com/binary/eDecoder.zip",
     "hash": "cbd6c0357df0d419a6ac4bcf89dcc972a8ccfb8d5ba0cdd2b876ad21ef4217ab",
     "post_install": [
-        "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name air) scripts/AirUtils.psm1)",
+        "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/AirUtils.psm1)",
         "$formats_path = \"$(persistdir '7zip' $global)\\Formats\"",
         "$arch = if ($architecture -eq '64bit') { '64' } else { '32' }",
         "EnsureHardLink \"$formats_path\\eDecoder.$arch.dll\" \"$dir\\eDecoder.$arch.dll\"",
@@ -16,7 +16,7 @@
     "uninstaller": {
         "script": [
             "if ($cmd -eq 'uninstall') {",
-            "    Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name air) scripts/AirUtils.psm1)",
+            "    Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/AirUtils.psm1)",
             "    $formats_path = \"$(persistdir '7zip' $global)\\Formats\"",
             "    $arch = if ($architecture -eq '64bit') { '64' } else { '32' }",
             "    RemoveHardLink (Join-Path $formats_path \"eDecoder.$arch.dll\")",

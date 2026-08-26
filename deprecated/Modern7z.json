@@ -15,7 +15,7 @@
         }
     },
     "post_install": [
-        "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name air) scripts/AirUtils.psm1)",
+        "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/AirUtils.psm1)",
         "$codecs_path = \"$(persistdir '7zip' $global)\\Codecs\"",
         "Get-ChildItem -Path $dir | ForEach-Object {",
         "    $target_path = $_.FullName",
@@ -32,7 +32,7 @@
     "uninstaller": {
         "script": [
             "if ($cmd -eq 'uninstall') {",
-            "    Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name air) scripts/AirUtils.psm1)",
+            "    Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/AirUtils.psm1)",
             "    $codecs_path = \"$(persistdir '7zip' $global)\\Codecs\"",
             "    $folder_names = @('brotli', 'fast-lzma2', 'lizard', 'lz4', 'lz5', 'zstd')",
             "    foreach ($folder_name in $folder_names) {",

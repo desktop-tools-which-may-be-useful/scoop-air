@@ -16,6 +16,9 @@ To add this bucket to scoop, run the following command in PowerShell:
 scoop bucket add air https://github.com/desktop-tools-which-may-be-useful/scoop-air
 ```
 
+> [!NOTE]
+> The local bucket name doesn't have to be `air`. Manifest scripts locate the bucket dynamically at install time, so any name works (e.g. `scoop bucket add scoop-air ...` then `scoop install scoop-air/...`).
+
 then
 
 ```pwsh

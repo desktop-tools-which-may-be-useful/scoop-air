@@ -7,7 +7,7 @@
     "url": "https://www.tc4shell.com/binary/Grit7z.zip",
     "hash": "98c3f7ac6d4b61479419925da7c153c007a0c57a31e313d2e083f277f1e83364",
     "post_install": [
-        "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name air) scripts/AirUtils.psm1)",
+        "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/AirUtils.psm1)",
         "$formats_path = \"$(persistdir '7zip' $global)\\Formats\"",
         "$arch = if ($architecture -eq '64bit') { '64' } else { '32' }",
         "EnsureHardLink \"$formats_path\\Grit7z.$arch.dll\" \"$dir\\Grit7z.$arch.dll\"",
@@ -16,7 +16,7 @@
     "uninstaller": {
         "script": [
             "if ($cmd -eq 'uninstall') {",
-            "    Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name air) scripts/AirUtils.psm1)",
+            "    Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/AirUtils.psm1)",
             "    $formats_path = \"$(persistdir '7zip' $global)\\Formats\"",
             "    $arch = if ($architecture -eq '64bit') { '64' } else { '32' }",
             "    RemoveHardLink (Join-Path $formats_path \"Grit7z.$arch.dll\")",
