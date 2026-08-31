@@ -1,13 +1,13 @@
 {
     "homepage": "https://www.todesk.com/",
     "description": "A remote control software",
-    "version": "4.9.9.2",
+    "version": "4.10.1.0",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.todesk.com/licence.html"
     },
-    "url": "https://dl.todesk.com/irrigation/ToDesk_4.9.9.2.exe#/dl.7z",
-    "hash": "3e1b9444de566b9fb991334b8506ef039d29934e85a81fc5869d5cb80dd1159c",
+    "url": "https://dl.todesk.com/irrigation/ToDesk_4.10.1.0.exe#/dl.7z",
+    "hash": "a87311d525d93cbb74167fabc22d49bb743bd86d32333817c6110353b111ece1",
     "bin": [
         [
             "ToDesk.exe",
