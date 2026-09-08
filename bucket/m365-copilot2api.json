@@ -1,0 +1,38 @@
+{
+    "version": "0.7.0",
+    "homepage": "https://github.com/HEXUXIU/M365-Copilot2API",
+    "description": "Microsoft 365 Copilot -> OpenAI / Anthropic compatible API gateway. A self-hosted Go gateway that translates the M365 Copilot ChatHub private protocol (WebSocket) into standard OpenAI / Anthropic compatible APIs.",
+    "license": "AGPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/HEXUXIU/M365-Copilot2API/releases/download/v0.7.0/m365-copilot2api-windows-amd64.exe#/m365-copilot2api.exe",
+            "hash": "d8767a4077509a71e9965635bbc96771155c3d1cf9f5a44285b5e918bdac214b"
+        },
+        "arm64": {
+            "url": "https://github.com/HEXUXIU/M365-Copilot2API/releases/download/v0.7.0/m365-copilot2api-windows-arm64.exe#/m365-copilot2api.exe",
+            "hash": "e0348606d941739daca29c1d61663f70c65329dcb3eb72d71f4002a781a8e45a"
+        },
+        "32bit": {
+            "url": "https://github.com/HEXUXIU/M365-Copilot2API/releases/download/v0.7.0/m365-copilot2api-windows-386.exe#/m365-copilot2api.exe",
+            "hash": "bdab5d842d45dea42e1243fb73f86d730e14f2c72b00a894c897cac30f3a7cc6"
+        }
+    },
+    "bin": "m365-copilot2api.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/HEXUXIU/M365-Copilot2API/releases/download/v$version/m365-copilot2api-windows-amd64.exe#/m365-copilot2api.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/HEXUXIU/M365-Copilot2API/releases/download/v$version/m365-copilot2api-windows-arm64.exe#/m365-copilot2api.exe"
+            },
+            "32bit": {
+                "url": "https://github.com/HEXUXIU/M365-Copilot2API/releases/download/v$version/m365-copilot2api-windows-386.exe#/m365-copilot2api.exe"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
+        }
+    }
+}
