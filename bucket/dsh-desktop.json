@@ -1,0 +1,43 @@
+{
+    "version": "2.0.10",
+    "description": "Open-source Windows and macOS desktop client built on DeepSeek Harness.",
+    "homepage": "https://github.com/anywhere-labs/dsh-desktop",
+    "license": "MIT",
+    "notes": [
+        "DSH Desktop ships its own updater which downloads and runs the official NSIS installer; that can install a second copy under %LOCALAPPDATA%\\Programs.",
+        "When the app offers an update, pick Later and run 'scoop update dsh-desktop' so Scoop keeps owning the installed version.",
+        "User data lives in %USERPROFILE%\\.dsh and %APPDATA%\\DSH Desktop (the latter is linked into persist), so upgrades and uninstalls keep it."
+    ],
+    "url": "https://github.com/anywhere-labs/dsh-desktop/releases/download/v2.0.10/DSH-Desktop-2.0.10-x64-Setup.exe#/dl.7z",
+    "hash": "a07be84b9615c0b2478791b0fe0591f912d3c331bb8645daf2efc093bc95e5e8",
+    "pre_install": [
+        "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/AirUtils.psm1)",
+        "# electron-builder NSIS: the application files are packed in $PLUGINSDIR\\app-64.7z",
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\Uninstall DSH Desktop.exe\", \"$dir\\uninstallerIcon.ico\" -Force -Recurse -ErrorAction SilentlyContinue",
+        "# Redirect data directory to persist",
+        "RedirectDirectory \"$env:APPDATA\\DSH Desktop\" \"$persist_dir\\APPDATA\\DSH Desktop\"",
+        "Remove-Module -Name AirUtils"
+    ],
+    "shortcuts": [
+        [
+            "DSH Desktop.exe",
+            "DSH Desktop"
+        ]
+    ],
+    "uninstaller": {
+        "script": [
+            "if ($cmd -eq 'uninstall') {",
+            "    Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/AirUtils.psm1)",
+            "    RemoveJunction \"$env:APPDATA\\DSH Desktop\"",
+            "    Remove-Module -Name AirUtils",
+            "}"
+        ]
+    },
+    "checkver": {
+        "github": "https://github.com/anywhere-labs/dsh-desktop"
+    },
+    "autoupdate": {
+        "url": "https://github.com/anywhere-labs/dsh-desktop/releases/download/v$version/DSH-Desktop-$version-x64-Setup.exe#/dl.7z"
+    }
+}
