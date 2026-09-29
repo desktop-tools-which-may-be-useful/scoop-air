@@ -1,5 +1,5 @@
 {
-    "version": "2.0.16-beta.1",
+    "version": "2.0.17-beta.1",
     "description": "Open-source Windows and macOS desktop client built on DeepSeek Harness. (Beta channel)",
     "homepage": "https://github.com/anywhere-labs/dsh-desktop",
     "license": "MIT",
@@ -9,8 +9,8 @@
         "When the app offers an update, pick Later and run 'scoop update dsh-desktop-beta' so Scoop keeps owning the installed version.",
         "Do not redirect %APPDATA%\\DSH Desktop Beta into persist: the app rejects a junctioned user-data directory (userDataDir must be a real directory) and drops into recovery mode."
     ],
-    "url": "https://github.com/anywhere-labs/dsh-desktop/releases/download/v2.0.16-beta.1/DSH-Desktop-Beta-2.0.16-beta.1-x64-Setup.exe#/dl.7z",
-    "hash": "346f61ea9f050f105f5b8182ac3b4bf64d40b74729a0e73be0db9dc030b175e5",
+    "url": "https://github.com/anywhere-labs/dsh-desktop/releases/download/v2.0.17-beta.1/DSH-Desktop-Beta-2.0.17-beta.1-x64-Setup.exe#/dl.7z",
+    "hash": "db70780ace93a318486653b9a63598734193795773adb3ab43647df4f43aad7d",
     "pre_install": [
         "# electron-builder NSIS: the application files are packed in $PLUGINSDIR\\app-64.7z",
         "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
