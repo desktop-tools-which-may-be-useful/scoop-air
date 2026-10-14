@@ -1,16 +1,16 @@
 {
-    "version": "5.0.57.0",
+    "version": "5.0.65.0",
     "description": "Graphical GREP tool to search across text files, Word and Excel documents, PDFs and archives",
     "homepage": "http://dngrep.github.io/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dnGrep/dnGrep/releases/download/v5.0.57.0/dnGREP.5.0.57.0.x64.zip",
-            "hash": "5f3c1f4ece5f51c94a1084a6d3a3a80309bcbcfc142289d0ee2e8ab40f57f354"
+            "url": "https://github.com/dnGrep/dnGrep/releases/download/v5.0.65.0/dnGREP.5.0.65.0.x64.zip",
+            "hash": "907d0c05b5cbd5087fd115137352ebeb6299b3fb826dd1c75d78614dfb603596"
         },
         "32bit": {
-            "url": "https://github.com/dnGrep/dnGrep/releases/download/v5.0.57.0/dnGREP.5.0.57.0.x86.zip",
-            "hash": "9e9d393126841bc4fd17f134de4b14b35550c1117539be3dd021b44d25313c15"
+            "url": "https://github.com/dnGrep/dnGrep/releases/download/v5.0.65.0/dnGREP.5.0.65.0.x86.zip",
+            "hash": "79b1afe503db886ce6c8c257ffe2e38e5eff0a03a8044941bf7cdd7acd85f2e4"
         }
     },
     "bin": [
