@@ -1,0 +1,37 @@
+{
+    "version": "0.50.4",
+    "description": "Real-time two-way speech translation for bilingual meetings, cloud or fully offline. Registers itself as a virtual microphone, so Zoom, Meet, Teams and any other app hears the translated speech.",
+    "homepage": "https://sokuji.kizuna.ai/",
+    "license": {
+        "identifier": "AGPL-3.0",
+        "url": "https://github.com/kizuna-ai-lab/sokuji/blob/main/LICENSE"
+    },
+    "notes": [
+        "Windows audio routing needs VB-CABLE, which the installer does not bundle: install it from https://vb-audio.com/Cable/ (the app's audio setup page can do it too), then reboot so CABLE Input/Output show up.",
+        "The app ships its own updater. When it offers an update, choose Later and run 'scoop update sokuji' instead, so Scoop keeps owning the installed copy.",
+        "Settings, transcripts and the downloaded on-device model bundles stay in %APPDATA%\\sokuji and are not removed by 'scoop uninstall'."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kizuna-ai-lab/sokuji/releases/download/v0.50.4/Sokuji-0.50.4-full.nupkg",
+            "hash": "9091f995e0e656beaecc79180a00be15c03520e8edbc8452539de5dc3e8c9fdf"
+        }
+    },
+    "extract_dir": "lib\\net45",
+    "shortcuts": [
+        [
+            "sokuji.exe",
+            "Sokuji"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/kizuna-ai-lab/sokuji"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/kizuna-ai-lab/sokuji/releases/download/v$version/Sokuji-$version-full.nupkg"
+            }
+        }
+    }
+}
