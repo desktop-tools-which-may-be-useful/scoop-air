@@ -1,5 +1,5 @@
 {
-    "version": "0.51.0",
+    "version": "0.51.1",
     "description": "Real-time two-way speech translation for bilingual meetings, cloud or fully offline. Registers itself as a virtual microphone, so Zoom, Meet, Teams and any other app hears the translated speech.",
     "homepage": "https://sokuji.kizuna.ai/",
     "license": {
@@ -13,8 +13,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kizuna-ai-lab/sokuji/releases/download/v0.51.0/Sokuji-0.51.0-full.nupkg",
-            "hash": "5c575813e48bd2d45a02afcb3a07639931fab0bca5c1310cf2cb486912948558"
+            "url": "https://github.com/kizuna-ai-lab/sokuji/releases/download/v0.51.1/Sokuji-0.51.1-full.nupkg",
+            "hash": "a7e773154381e6e95eea9787c90f86c806656ebeb98ab1435ab29072277310ec"
         }
     },
     "extract_dir": "lib\\net45",
