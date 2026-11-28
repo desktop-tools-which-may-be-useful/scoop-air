@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "description": "Native ACP stdio bridge and Martty-based terminal front end for ZCode",
+  "homepage": "https://github.com/desktop-tools-which-may-be-useful/zcode-acp-native",
+  "license": "Apache-2.0",
+  "notes": [
+    "The local zcode-server is optional: the ACP bridge can attach to the desktop app runtime.",
+    "For a standalone local server on Windows, enable WSL2 and run the bundled wsl-server.ps1 helper.",
+    "Use 'zcode-acp-tui' for the terminal UI and 'zcode-acp-native' for ACP clients."
+  ],
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/desktop-tools-which-may-be-useful/zcode-acp-native/releases/download/v0.1.0/zcode-acp-native-x86_64-windows.zip",
+      "hash": "4e2e710464c0a4e72bcead8d081d0c5317e57c5b3144c634be2e8908d1484b0f",
+      "bin": [
+        ["zcode-acp-native.exe", "zcode-acp-native"],
+        ["zcode-acp-tui.ps1", "zcode-acp-tui"]
+      ]
+    },
+    "arm64": {
+      "url": "https://github.com/desktop-tools-which-may-be-useful/zcode-acp-native/releases/download/v0.1.0/zcode-acp-native-aarch64-windows.zip",
+      "hash": "2ce077ec1a761efb80a614bcf0cbf85d0cf81ef0a522cc35c7469c839e50b37a",
+      "bin": [
+        ["zcode-acp-native.exe", "zcode-acp-native"],
+        ["zcode-acp-tui.ps1", "zcode-acp-tui"]
+      ]
+    }
+  },
+  "checkver": {
+    "github": "https://github.com/desktop-tools-which-may-be-useful/zcode-acp-native"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/desktop-tools-which-may-be-useful/zcode-acp-native/releases/download/v$version/zcode-acp-native-x86_64-windows.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/desktop-tools-which-may-be-useful/zcode-acp-native/releases/download/v$version/zcode-acp-native-aarch64-windows.zip"
+      }
+    }
+  }
+}
